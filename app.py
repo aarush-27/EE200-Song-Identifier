@@ -199,6 +199,11 @@ with tab3:
         type=["mp3", "wav"],
         accept_multiple_files=True
     )
+    if uploaded_files and len(uploaded_files) > 3:
+        st.error(
+            "Please upload at most 3 files at a time."
+        )
+        st.stop()
 
     if uploaded_files:
 
