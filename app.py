@@ -35,13 +35,12 @@ with tab1:
 
     st.header("Indexed Song Library")
 
-    songs = sorted(
-        [
-            os.path.splitext(f)[0]
-            for f in os.listdir("songs")
-            if f.endswith(".mp3")
-        ]
-    )
+    with open("song_list.txt", "r") as f:
+    songs = [
+        line.strip()
+        for line in f
+        if line.strip()
+    ]
 
     st.write(f"Total Songs: {len(songs)}")
 
