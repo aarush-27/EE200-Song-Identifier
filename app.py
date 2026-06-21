@@ -36,11 +36,11 @@ with tab1:
     st.header("Indexed Song Library")
 
     with open("song_list.txt", "r") as f:
-    songs = [
-        line.strip()
-        for line in f
-        if line.strip()
-    ]
+        songs = [
+            line.strip()
+            for line in f
+            if line.strip()
+        ]
 
     st.write(f"Total Songs: {len(songs)}")
 
