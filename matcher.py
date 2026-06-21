@@ -1,7 +1,12 @@
 from collections import Counter
 import pickle
+import gzip
 
-with open("database.pkl", "rb") as f:
+with gzip.open(
+    "database.pkl.gz",
+    "rb"
+) as f:
+
     DATABASE = pickle.load(f)
 
 
