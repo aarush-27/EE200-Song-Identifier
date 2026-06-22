@@ -134,8 +134,10 @@ with tab2:
                 "Spectrogram"
             )
 
+            y_plot = y[:30 * sr]
+
             spec_fig = plot_spectrogram(
-                y,
+                y_plot,
                 sr
             )
 
@@ -155,7 +157,7 @@ with tab2:
                 )
 
                 const_fig = plot_constellation(
-                    y,
+                    y_plot,
                     sr
                 )
 
